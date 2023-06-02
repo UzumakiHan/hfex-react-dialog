@@ -1,6 +1,7 @@
 
 import './index.scss';
 import closeIcon from './close-black.png'
+
 interface IProps {
     show: boolean;
     title?:string;
