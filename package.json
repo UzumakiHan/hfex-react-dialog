@@ -12,7 +12,7 @@
     "prettier": "prettier ./src/**/* --write",
     "stylelint": "stylelint src/**/*.{scss,css,less} --fix",
     "lint":"npm run eslint && npm run stylelint npm run prettier",
-    "build": "rimraf dist && rollup -c"
+    "buildAll": "rimraf dist && rollup -c"
   },
   "files": [
     "dist",

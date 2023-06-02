@@ -1,24 +1,24 @@
-
 import './index.scss';
-import closeIcon from './close-black.png'
-
+import closeIcon from './close-black.png';
 interface IProps {
     show: boolean;
-    title?:string;
-    handleCloseAction: () => void
+    title?: string;
+    handleCloseAction: () => void;
 }
-function Dialog(props: IProps) {
-    const handleClose = () => {
-        props.handleCloseAction()
-    }
-    return (
-        props.show ? <div className='dialog'>
-            <div className='dialog-content'>
-
-                <img src={closeIcon} alt="" className='dialog-content-close' onClick={handleClose}/>
-                <h1 className='dialog-content-title'>{props.title}</h1>
+function dialog(props: IProps) {
+    const {handleCloseAction, title, show} = props;
+    return show ? (
+        <div className="dialog">
+            <div className="dialog-content">
+                <img
+                    alt=""
+                    className="dialog-content-close"
+                    onClick={handleCloseAction}
+                    src={closeIcon}
+                />
+                <h1 className="dialog-content-title">{title}</h1>
             </div>
-        </div> : <></>
-    )
+        </div>
+    ) : null;
 }
-export default Dialog;
+export default dialog;
