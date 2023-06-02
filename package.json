@@ -1,0 +1,84 @@
+{
+  "name": "hfex-react-dialog",
+  "version": "0.0.0",
+  "description": "react组件测试",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "eslint": "eslint src/**/*.{ts,js,json,jsx,tsx} --fix",
+    "prettier": "prettier ./src/**/* --write",
+    "stylelint": "stylelint src/**/*.{scss,css,less} --fix",
+    "lint":"npm run eslint && npm run stylelint npm run prettier",
+    "build": "rimraf dist && rollup -c"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/react": "^18.2.6",
+    "autoprefixer": "^10.4.14",
+    "core-js": "^3.30.2",
+    "eslint": "^8.41.0",
+    "eslint-config-hfex": "^1.0.2",
+    "hfex-prettier-config": "^1.0.0",
+    "hfex-stylelint-config": "^1.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-img": "^1.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.62.1",
+    "stylelint": "^15.6.2",
+    "typescript": "^5.0.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "hfex"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "hfex-stylelint-config/src/rules/base"
+    ]
+  },
+  "prettier": "hfex-prettier-config",
+  "lint-staged": {
+    "src/**/*.{ts,js,json,jsx,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.{scss,css,less}": [
+      "stylelint --fix",
+      "git add"
+    ],
+    "src/**/*.{js,scss,css,less,json,ts,jsx,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

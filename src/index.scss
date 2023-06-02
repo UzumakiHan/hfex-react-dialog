@@ -1,0 +1,31 @@
+.dialog{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 990;
+    &-content{
+        width: 500px;
+        height: 300px;
+        background: #fff;
+        border-radius: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        &-close{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            
+        }
+        &-title{
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+}
