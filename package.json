@@ -1,6 +1,6 @@
 {
   "name": "hfex-react-dialog",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "react组件测试",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
